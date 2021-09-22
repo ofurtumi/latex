@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{amsmath,mathtools,amssymb}
+\usepackage{algorithmicx,algpseudocodex}
+
+\title{Skilaverkefni 4 - Stærðfræðimynstur}
+\author{ttb3@hi.is, gbt6@hi.is, dal17@hi.is}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Verkefni 1}
+\subsection*{a)}
+
+\begin{algorithmic}
+\State function SUMMA(n):
+\State $x \gets 0$
+\For{$i \gets 1 \ to \ n$}
+    \State $x \gets x + i^2$
+\EndFor
+\State return x
+\end{algorithmic}
+
+\subsection*{b)}
+
+\section*{Verkefni 2}
+\subsection*{a)}
+
+\section*{Verkefni 3}
+\begin{align*}
+   O(nlog(n))\ &nr.\ 7\\
+   O(n^{-1/2})\ &nr.\ 6\\
+   O(log(n))\ &nr.\ 9\\
+   O(\pi^n)\ &nr.\ 3\\
+   O(n)\ &nr.\ 8\\
+   O(n^\pi)&nr.\ 5\\
+   O(n!)\ &nr.\ 1\\
+   O(n^{1000})\ &nr.\ 4\\
+   O(5^n)\ &nr.\ 2
+\end{align*}
+
+\section*{Verkefni 4}
+\subsection*{a)}
+Ef stafur í leitarstreng er italic passar hann ekki við viðmiðunarstreng, ef stafur í leitarstreng er bold passar hann við staf í viðmiðunarstreng
+
+\begin{center}
+    \begin{tabular}{c c c c c c c c}
+        |\textit{F}|&|E|&| \ |&| \ |&| \ |&| \ |&| \ | & \ s=0\\
+        |C|&|O|&|V|&|F|&|E|&|F|&|E| & \ j=1\\
+        \\
+        | \ |&|\textit{F}|&|E|&| \ |&| \ |&| \ |&| \ | & \ s=1\\
+        |C|&|O|&|V|&|F|&|E|&|F|&|E| & \ j=1\\
+        \\
+        | \ |&| \ |&|\textit{F}|&|E|&| \ |&| \ |&| \ | & \ s=2\\
+        |C|&|O|&|V|&|F|&|E|&|F|&|E| & \ j=1\\
+        \\
+        | \ |&| \ |&| \ |&|\textbf{F}|&|\textbf{E}|&| \ |&| \ | & \ s=3\\
+        |C|&|O|&|V|&|F|&|E|&|F|&|E| & \ j=2\\
+        \\
+        | \ |&| \ |&| \ |&| \ |&|F|&|E|&| \ | & \ s=4\\
+        |C|&|O|&|V|&|F|&|E|&|F|&|E| & \ j=1\\
+        \\
+        | \ |&| \ |&| \ |&| \ |&| \ |&|\textbf{F}|&|\textbf{E}| & \ s=5\\
+        |C|&|O|&|V|&|F|&|E|&|F|&|E| & \ j=2\\
+    \end{tabular}
+\end{center}
+
+\subsection*{b)}
+
+\end{document}

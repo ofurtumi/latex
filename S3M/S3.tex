@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Skilaverkefni 3 - Stærðfræðimynstur}
+\author{ttb3@hi.is}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Verkefni 1}
+Forritið tekur inn þessi gildi:
+\begin{list}{}{}
+    \item mkk = meðallaun karla fyrri skatt
+    \item mkvk = meðallaun kvenna fyrri skatt
+    \item ke = kyn einstaklings
+    \item me = mánaðarlaun einstaklings
+\end{list}
+og athugar hvort me sé hærra eða lægra en tilheyrandi meðallaun, þ.e.
+
+\subsection*{a)}
+Bakmengi fallsins eru öll þau gildi sem myndmengi fallsins getur valið úr. Í þessu tilfelli er það output forritsins, þ.e. 
+
+\begin{center}
+    $\mathbb{Y} \equiv \{$"Yfir meðallaunum", "Undir meðallaunum"$\}$
+\end{center} 
+
+\subsection*{b)}
+Formengið er öll stök sem fallið getur tekið inn, það eru
+
+\begin{align*}
+    \mathbb{X} = (mkk,mkvk,me,ke|mkk,mkvk,me\in \mathbb{R} \land ke \in \{"kona","karl" \})
+\end{align*} 
+
+\newpage
+\section*{Verkefni 2}
+Með fylkjamargföldun fáum við tvær yrðingar
+\begin{align*}
+    (a\land b)\lor(\lnot b\land T)=T\\
+    (b\land b)\lor(b\land T)=\lnot a
+\end{align*}
+byrjum að vinna með seinni yrðinguna, notum \emph{sjálfsvalsregluna} vinstra megin við eðun og \emph{samsemdarregluna} hægra megin við eðun
+útkoman úr því er 
+
+\begin{align*}
+    b\lor b=\lnot a
+\end{align*} 
+
+og þá er hægt að nota \emph{sjálfsvalsregluna} á þá yrðingu og fá út að 
+\begin{align*}
+    b=\lnot a
+\end{align*}
+
+snúum okkur þá að fyrri yrðingunni og stingum $\lnot a$ inn í staðinn fyrir $b$, yrðingin lítur þá svona út
+\begin{align*}
+    (a\land \lnot a)\lor(\lnot b\land T)=T
+\end{align*}
+þá er hægt að nota \emph{samsemdarregluna} hægra megin og \emph{neitunarregluna} vinstra megin til þess að fá
+\begin{align*}
+    F\lor\lnot b=T
+\end{align*}
+þá beitir maður örsnöggri \emph{samsemdarreglu} og er kominn með
+\begin{align*}
+    \lnot b = T
+\end{align*}
+þá er hægt að setja upp lista yfir gildi
+\begin{align*}
+    \lnot b&= T\\
+    b&=F\\
+    b&=\lnot a\\
+    \lnot a&=F\\
+    a&=T
+\end{align*}
+Þá eru gildin á a og b þessi $a=1$ og $b=0$
+
+\newpage
+\section*{Verkefni 3}
+Í hvert skipti sem maður þvær á sér hendurnar drepur maður 99.9\% af bakteríum, það skilur eftir 0.1\% baktería eða 0.001 sinnum upprunalega fjölda baktería. 
+Þannig er hægt að finna út hversu oft þarf að þvo sér um hendur með því að leysa fyrir veldið n yfir 0.001 og það má sýna með þessari formúlu
+\begin{align}
+    10^9*0.001^n&=1\\
+    0.001^n&=\frac{1}{10^9}\\
+    log(0.001^n)&=log(\frac{1}{10^9})\\
+    n*log(0.001)&=log(\frac{1}{10^9})\\
+    n&=\frac{log\frac{1}{10^9}}{log(0.001)}\\
+    n&=3
+\end{align}
+Maður þarf að þvo sér þrisvar sinnum um hendurnar til þess að enda með aðeins 1 bakteríu á hvorri hendi.
+
+\newpage
+\section*{Verkefni 4}
+\subsection*{a)}
+\begin{align*}
+    \sum_{k=0}^{n}12k(k+4)&=\sum_{k=0}^{n}12k^2+48k\\
+    &=12\sum_{k=0}^{n}k^2+12\sum_{k=0}^{n}4k\\
+    &=12\frac{n(n+1)(2n+1)}{6}+48\frac{n(n+1)}{2}
+\end{align*}
+\subsection*{b)}
+\begin{align*}
+    \sum_{k=1}^{n}4k^2(6+k)&=\sum_{k=1}^{n}24k^2+4k^3\\
+    &=24\sum_{k=1}^{n}k^2+4\sum_{k=1}^{n}k^3\\
+    &=24\frac{n(n+1)(2n+1)}{6}+4\frac{n^2(n+1)^2}{4}
+\end{align*}
+Þar sem að útkoman á þessu falli minnkar hratt eftir því sem k stækkar, og k stækkar endalaust, er hægt að segja að útkoman úr þessu falli sé 0
+\begin{align*}
+    \sum_{k=2}^\infty0.5^k
+\end{align*}
+\begin{align*}
+    0.5^2&=\frac{1}{4}\\
+    0.5^3&=\frac{1}{8}\\
+    0.5^4&=\frac{1}{16}\\
+    0.5^5&=\frac{1}{32}\\
+    0.5^{10}&=\frac{1}{1024}\\
+    0.5^{20}&=\frac{1}{1048576}\\
+    0.5^{25}&=\frac{1}{33554432}
+\end{align*}
+þessi veldisvöxtur heldur áfram og þegar k er komið upp í stærri tölur eins og 329 eða meir hætta reiknivélar að geta sýnt úttakið á nokkurn merkingalegan máta og sýna í staðinn bara 0
+
+\end{document}
