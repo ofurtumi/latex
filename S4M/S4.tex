@@ -27,8 +27,75 @@
 
 \subsection*{b)}
 
+\begin{algorithmic}
+    \State function FIBONOTCCI(n)
+    \If{$n\leq 1$}
+        \State return 1
+    \Else 
+        \State return $2(n-1)+3(n-2)$
+    \EndIf
+\end{algorithmic}
+
+\newpage
 \section*{Verkefni 2}
 \subsection*{a)}
+Leysum fyrir $\lim_{x\to\infty} \frac{f(x)}{g(x)}<\infty$, $f(x)$, $g(x)$ og stóra $O$ eru eftirfarandi:
+\begin{align*}
+    O(x)\\
+    g(x)&=x\\
+    f(x)&=\frac{x^4+x^2+1}{x^3}
+\end{align*}
+    
+Leysum:
+\begin{align*}
+    \lim_{x\to\infty} \frac{f(x)}{g(x)} 
+    &= \frac{\frac{x^4+x^2+1}{x^3}}{x}\\
+    &= \frac{x^4+x^2+1}{x^4}\\
+    &= \frac{\frac{x^4}{x^4}+\frac{x^2}{x^4}+\frac{1}{x^4}}{\frac{x^4}{x^4}}\\
+    &= \frac{1+\frac{1}{x^2}+\frac{1}{x^4}}{1}\\
+    &= 1+\frac{1}{x^2}+\frac{1}{x^4}\\
+    &\to 1+0+0\\
+    &= 1\\
+    1 &< \infty
+\end{align*}
+
+\subsection*{b)}
+Notum sömu aðferð til að sanna, $f(x)$, $g(x)$ og stóra $O$ eru eftirfarandi:
+\begin{align*}
+    O(1)\\
+    g(x)&=x\\
+    f(x)&=(1+\frac{1}{x^2})(1+\frac{5}{x^3})
+\end{align*}
+
+Leysum: 
+\begin{align*}
+    \lim_{x\to\infty} \frac{f(x)}{g(x)}
+    &=\frac{(1+\frac{1}{x^2})(1+\frac{5}{x^3})}{1}\\
+    &=(1+\frac{1}{x^2})(1+\frac{5}{x^3})\\
+    &\to(1+0)(1+0)\\
+    &=1\\
+    1&<\infty
+\end{align*}
+
+\subsection*{c)}
+Notum sömu aðferð til að sanna en nýtum reglu l'Hospital til þess að leysa út, $f(x)$, $g(x)$ og stóra $O$ eru eftirfarandi:
+
+\begin{align*}
+    O(1)\\
+    g(x)&=1\\
+    f(x)&=\frac{log(2x)}{log(x)}
+\end{align*}
+
+Leysum:
+\begin{align*}
+    \lim_{x\to\infty} \frac{f(x)}{g(x)}
+    &=\frac{log(2x)}{log(x)}\\
+    (Notum l'Hospital)&=\frac{\frac{1}{x}}{\frac{1}{x}}\\
+    &=\frac{1}{x*\frac{1}{x}}\\
+    &=1\\
+    &\to1\\
+    1&<\infty\\
+\end{align*}
 
 \section*{Verkefni 3}
 \begin{align*}
@@ -43,6 +110,7 @@
    O(5^n)\ &nr.\ 2
 \end{align*}
 
+\newpage
 \section*{Verkefni 4}
 \subsection*{a)}
 Ef stafur í leitarstreng er italic passar hann ekki við viðmiðunarstreng, ef stafur í leitarstreng er bold passar hann við staf í viðmiðunarstreng
@@ -70,5 +138,32 @@ Ef stafur í leitarstreng er italic passar hann ekki við viðmiðunarstreng, ef
 \end{center}
 
 \subsection*{b)}
+Fyrst að fyrsti stafur í p er ekki til í t þá er s það eina sem hækkar og það þarf ekki að fara í while loopið, tímalykkjan er þá lengd for lykkjunnar eða O(n).
+
+\newpage
+\section*{Verkefni 5}
+Til að finna hvort tekur fleiri aðgerðir þarf að leggja saman fjölda margföldunaraðgerða og samlagningaraðgerða fylkjanna og bera þær saman fyrir (AB)C og A(BC)
+\begin{align*}
+    (AB)C 
+    &=5*5*4 &&\text{Fjöldi margfaldana A og B}\\
+    &+3*4*4 &&\text{Fjöldi samlagnina A og B}\\
+    &+3*4*6 &&\text{Fjöldi margfaldana AB og C}\\
+    &+3*3*6 &&\text{Fjöldi samlagnina AB og C}\\
+    &=234 &&\text{Heildarfjöldi aðgerða}
+\end{align*}
+
+\begin{align*}
+    A(BC) 
+    &=5*4*6 &&\text{Fjöldi margfaldana B og C}\\
+    &+5*4*6 &&\text{Fjöldi samlagnina B og C}\\
+    &+3*5*6 &&\text{Fjöldi margfaldana BC og A}\\
+    &+3*4*6 &&\text{Fjöldi samlagnina BC og A}\\
+    &=372 &&\text{Heildarfjöldi aðgerða}
+\end{align*}
+
+Þannig er hægt að sjá að (AB)C tekur færri aðgerðir en A(BC) og er þessvegna hraðara
+
+\section*{Verkefni 6}
+Hægt er að nota sömu aðferð og notuð var í verkefni tvö til þess að sýna fram á að stóra O í $n^{10}2^n$ er $O(n^2)$ og þá er hægt að sjá auðveldlega að $10^n>2^n$
 
 \end{document}
