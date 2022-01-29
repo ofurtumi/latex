@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Dæmaskamtur 1 - Rásir}
+\author{ttb3@hi.is}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Verkefni 1}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Hex & Dec & Oct & Bin \\
+        \hline
+        2F & 47 & 57 & 0010-1111 \\
+        \hline
+        10 & 16 & 20 & 0001-0000 \\
+        \hline
+        99 & 153 & 231 &  1001-1001 \\
+        \hline
+        6 & 6 & 6 & 0110 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\section*{Verkefni 2}
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \parbox{6cm}{
+        \subsection*{a)}    
+        \begin{align*}
+            0001 & \\
+            *  0011 & \\
+            \hline
+            0001 & \\
+            0001x & \\
+            =  00011 &
+        \end{align*}} &
+        \parbox{6cm}{
+        \subsection*{b)}    
+        \begin{align*}
+            0110 & \\
+            * 0101 & \\
+            \hline
+            0110 & \\
+            0000x & \\
+            0110xx & \\
+            0000xxx & \\
+            =  0011110
+          \end{align*}}\\ 
+          \hline
+    \end{tabular}
+\end{center}
+
+\section*{Verkefni 3}
+\begin{tabular}{|c|c|}
+    \hline
+    \parbox{6cm}{\subsection*{a)}
+    \begin{align*}
+        (+7) \ 0111&\\
+        + (+1) \ 0001&\\
+        \hline
+        \neq (-8) \ 1000&\\
+        = (+8) \ 0111 &\\
+        \text{ekki hægt því +tölur ná bara upp í } 7
+    \end{align*}} &
+    \parbox{6cm}{\subsection*{b)}
+    \begin{align*}
+        (+4) \ 0100&\\
+        + (-1) \ 1111&\\
+        \hline
+        = (+3) \ 0011&\\
+    \end{align*}\\
+    \text{hér verður ekki overflow því tölurnar}  \\
+    \text{hafa ekki sömu formerki, } \\
+    \text{þrátt fyrir að talan sé í raun } 10011}\\
+    \hline
+    \parbox{6cm}{
+        \subsection*{c)}    
+        \begin{align*}
+          (+3) \ 0011&\\
+        + (-6) \ 1010&\\
+        \hline
+        = (-3) \ 1101&
+        \end{align*}} &
+        \parbox{6cm}{
+        \subsection*{d)}    
+        \begin{align*}
+          (+3) \ 0011&\\
+        + (-4) \ 1100&\\
+        \hline
+        =  (-1) \ 1111&
+          \end{align*}}\\ 
+          \hline
+\end{tabular}
+
+\section*{Verkefni 4}
+\begin{align*}
+    1010100\:&  T\\
+    1101001\:&  i\\
+    1101110\:&  n\\
+    1100001\:&  a\\
+    0100000\:&  "bil" \\
+    1010100\:&  T\\
+    1110101\:&  u\\
+    1110010\:&  r\\
+    1101110\:&  n\\
+    1100101\:&  e\\
+    1110010\:&  r
+\end{align*}
+Tina Turner
+
+\newpage
+\section*{Verkefni 5}
+Þar sem $C\lor A$ hlutinn þarf aðeins $C$ eða $A'$ til að vera satt, verður sú hlið sönn frekar oft
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        A & B & C & A' & F\\
+        1 & 0 & 0 & 0 & 0\\
+        1 & 1 & 0 & 0 & 1\\
+        1 & 1 & 1 & 0 & 1\\
+        0 & 1 & 1 & 1 & 1\\
+        0 & 0 & 1 & 1 & 1\\
+        0 & 0 & 0 & 1 & 1\\
+        0 & 1 & 0 & 1 & 1\\
+        1 & 0 & 1 & 0 & 1\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}

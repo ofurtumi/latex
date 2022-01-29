@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{minted}
+
+
+\graphicspath{ {./} }
+\title{Dæmaskammtur 2 - GHSR}
+\author{ttb3@hi.is}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+
+\section*{2.1}
+\subsection*{a)}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x&y&z&(x+y+z)'&x'y'z'\\
+        \hline
+        1&1&1&0&0\\
+        0&1&1&0&0\\
+        1&0&1&0&0\\
+        0&0&1&0&0\\
+        1&1&0&0&0\\
+        0&1&0&0&0\\
+        1&0&0&0&0\\
+        0&0&0&1&1\\
+        \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x&y&z&(xyz)'&x'+y'+z'\\
+        \hline
+        1&1&1&0&0\\
+        0&1&1&1&1\\
+        1&0&1&1&1\\
+        0&0&1&1&1\\
+        1&1&0&1&1\\
+        0&1&0&1&1\\
+        1&0&0&1&1\\
+        0&0&0&1&1\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{b)}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x&y&z&x+yz&(x+y)(x+z)\\
+        \hline
+        1&1&1&1&1\\
+        0&1&1&1&1\\
+        1&0&1&1&1\\
+        0&0&1&0&0\\
+        1&1&0&1&1\\
+        0&1&0&0&0\\
+        1&0&0&1&1\\
+        0&0&0&0&0\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{c)}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x&y&z&x(y+z)&xy+xz\\
+        \hline
+        1&1&1&1&1\\
+        0&1&1&0&0\\
+        1&0&1&1&1\\
+        0&0&1&0&0\\
+        1&1&0&1&1\\
+        0&1&0&0&0\\
+        1&0&0&0&0\\
+        0&0&0&0&0\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{d)}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x&y&z&x+(y+z)&(x+y)+z\\
+        \hline
+        1&1&1&1&1\\
+        0&1&1&1&1\\
+        1&0&1&1&1\\
+        0&0&1&1&1\\
+        1&1&0&1&1\\
+        0&1&0&1&1\\
+        1&0&0&1&1\\
+        0&0&0&0&0\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{e)}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x&y&z&x(yz)&(xy)z\\
+        \hline
+        1&1&1&1&1\\
+        0&1&1&0&0\\
+        1&0&1&0&0\\
+        0&0&1&0&0\\
+        1&1&0&0&0\\
+        0&1&0&0&0\\
+        1&0&0&0&0\\
+        0&0&0&0&0\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
